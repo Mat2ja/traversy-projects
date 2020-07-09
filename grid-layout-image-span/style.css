@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body {
+	background: linear-gradient(to right bottom, black, #444);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	backdrop-filter: blur(20px);
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	padding: 1rem;
+	font-size: 1.6rem;
+}
+
+h2 {
+	font-size: 4.5rem;
+	font-weight: 300;
+	margin: 1rem;
+	margin-top: 0;
+}
+
+h2 span {
+	font-size: 3rem;
+}
+p {
+	font-size: 2rem;
+}
+.container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 21rem);
+	gap: 1rem;
+}
+
+.container > div {
+	border-radius: 6px;
+	cursor: pointer;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background-size: cover;
+	background-attachment: fixed;
+
+	transition: all 350ms ease-in;
+}
+
+.container > div:hover {
+    opacity: 0.8;
+    transform: scale(.98);
+}
+
+.container div:nth-child(1) {
+	grid-column: 1 / span 2;
+}
+.container div:nth-child(6) {
+	grid-column: 3 / span 2;
+}
+
+.container div:nth-child(11) {
+	grid-row: 3 / 5;
+	grid-column: 3 / span 1;
+}
+.container div:nth-child(10) {
+	grid-column: 1 / span 2;
+	grid-row: 4 / 5;
+}
+
+.bg1 {
+	background: url(img/bg1.jpg);
+}
+
+.bg2 {
+	background: url(img/bg3.jpg);
+
+	color: #333;
+}

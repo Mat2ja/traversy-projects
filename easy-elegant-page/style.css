@@ -22,6 +22,7 @@ body {
 	color: white;
 }
 
+
 h3,
 p {
 	margin: 1rem;
@@ -174,7 +175,6 @@ footer p {
 /* Landscape */
 @media only screen and (max-height: 31.25rem) {
 	/* 500px */
-
 	.content .title,
 	.content .text {
 		display: none;

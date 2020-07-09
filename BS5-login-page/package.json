@@ -1,0 +1,17 @@
+{
+	"name": "BS5-login-page",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"watch:sass": "node-sass sass/main.scss css/style.css -w"
+	},
+	"keywords": [],
+	"author": "Matija Osrecki",
+	"license": "ISC",
+	"dependencies": {
+		"node-sass": "^4.14.1",
+		"bootstrap": "^5.0.0-alpha1",
+		"bootstrap-icons": "^1.0.0-alpha4"
+	}
+}
