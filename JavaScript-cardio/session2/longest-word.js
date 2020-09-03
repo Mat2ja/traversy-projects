@@ -3,27 +3,16 @@
 // ex. longestWord('Hi there, my name is Brad') === 'there,'
 
 function longestWord(sen) {
-    // let senClean = sen.trim().replaceAll(',', '').replaceAll('.', '').replaceAll('!', '').replaceAll('?', '');
-    // seems like replaceAll doesn't work in Node...
-    let senClean = sen.trim().split(',').join('').split('.').join('').split('!').join('').split('?').join('');
-    let arr = senClean.split(" ");
+    const words = sen.toLowerCase().match(/[\d\w]+/g);
+    console.log(words);
 
-    let longest = []
-    let maxLen = 0;
+    words.sort((a, b) => b.length - a.length);
 
-    for (let word of arr) {
-        if (word.length > maxLen) {
-            longest = [word];
-            maxLen = word.length;
-
-        } else if (word.length === maxLen) {
-            longest.push(word);
-        }
-    }
+    let longest = words.filter(word => word.length === words[0].length);
 
     return longest.length > 1 ? longest : longest[0];
 }
 
 
-console.log(longestWord('Hello..... my name is Brad'));
-console.log(longestWord('Hello there, my name is Brad'));
+console.log(longestWord('Hello freaky bithcess..... my name is Brad?!? !? ?!'));
+console.log(longestWord('Hello there, boomshakalaka vroomhakalaka my name is Brad'));
